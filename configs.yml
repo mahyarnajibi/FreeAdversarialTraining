@@ -1,0 +1,26 @@
+TRAIN:
+    epochs: 90
+    arch: 'resnet50'
+    start_epoch: 0
+    lr: 0.1
+    momentum: 0.9
+    weight_decay: 0.0001
+    print_freq: 10
+    mean: !!python/tuple [0.485, 0.456, 0.406]
+    std: !!python/tuple [0.229, 0.224, 0.225]
+ADV:
+    clip_eps: 4.0
+    fgsm_step: 4.0
+    n_repeats: 4
+    pgd_attack: 
+    - !!python/tuple [10, 0.00392156862] #[10 iters, 1.0/255.0]
+    #- !!python/tuple [50, 0.00392156862] #[50 iters, 1.0/255.0]
+    
+DATA:
+    workers: 4
+    batch_size: 256
+    img_size: 256
+    crop_size: 224
+    max_color_value: 255.0
+
+    
