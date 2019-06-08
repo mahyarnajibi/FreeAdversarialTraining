@@ -26,8 +26,6 @@ def validate_pgd(val_loader, model, criterion, K, step, configs, logger):
         input = input.cuda(non_blocking=True)
         target = target.cuda(non_blocking=True)
         
-        
-        #input.sub_(mean).div_(std)
         orig_input = input.clone()
         randn = torch.FloatTensor(input.size()).uniform_(-eps, eps).cuda()
         input += randn
@@ -44,8 +42,6 @@ def validate_pgd(val_loader, model, criterion, K, step, configs, logger):
             input += pert.data
             input = torch.max(orig_input-eps, input)
             input = torch.min(orig_input+eps, input)
-
-            #noisy_input.clamp_(input-eps, input+eps)
             input.clamp_(0, 1.0)
         
         input.sub_(mean).div_(std)
