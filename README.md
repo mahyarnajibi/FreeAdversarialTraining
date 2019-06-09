@@ -1,12 +1,13 @@
 # Free Adversarial Training 
-This is a PyTorch implementation of the [Free Adversarial Training](https://arxiv.org/abs/1904.12843 "Free Adversarial Training") paper.
+This is a PyTorch implementation of the [Adversarial Training for Free!](https://arxiv.org/abs/1904.12843 "Free Adversarial Training") paper.
 The official TensorFlow implementation can be found [here](https://github.com/ashafahi/free_adv_train).
 
+Using the Free Adversarial Training (Free-m) algorithm, we can train robust models at no additional cost compared to natural training. This allows us to train robust ImageNet models using only a few GPUs in a couple of days! Below is the performance of various Free-trained ImageNet models where we vary the replay parameter (m).
 <p align="center">
 <img src="http://legacydirs.umiacs.umd.edu/~najibi/github_readme_files/free_adv.png"/>
 </p>
 
- This repository provides codes for training and evaluating the models on the ImageNet dataset.
+This repository provides codes for training and evaluating the models on the ImageNet dataset.
 The implementation is adapted from the [official PyTorch repository](https://github.com/pytorch/examples/blob/master/imagenet).
 
 ## Installation
