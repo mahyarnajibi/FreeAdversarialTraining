@@ -175,7 +175,6 @@ def train(train_loader, model, criterion, optimizer, epoch):
         end = time.time()
         input = input.cuda(non_blocking=True)
         target = target.cuda(non_blocking=True)
-        # Label smoothing
         data_time.update(time.time() - end)
         for j in range(configs.ADV.n_repeats):
             # Ascend on the global noise
