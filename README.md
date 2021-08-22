@@ -4,7 +4,7 @@ The official TensorFlow implementation can be found [here](https://github.com/as
 
 Using the Free Adversarial Training (Free-m) algorithm, we can train robust models at no additional cost compared to natural training. This allows us to train robust ImageNet models using only a few GPUs in a couple of days! Below is the performance of various Free-trained ImageNet models where we vary the replay parameter (m).
 <p align="center">
-<img src="http://legacydirs.umiacs.umd.edu/~najibi/github_readme_files/free_adv.png"/>
+<img src="https://mahyarnajibi.github.io/github_readme_data/free_adv.png"/>
 </p>
 
 This repository provides codes for training and evaluating the models on the ImageNet dataset.
